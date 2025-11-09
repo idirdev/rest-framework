@@ -11,6 +11,7 @@ export {
   RouteHandler,
   Route,
   HttpMethod,
+  CookieOptions,
 } from './types';
 export { getMimeType } from './utils/mime';
 export { parseQueryString, serializeQueryString } from './utils/querystring';
