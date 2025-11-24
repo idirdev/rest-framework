@@ -223,3 +223,35 @@ examples/
 ## License
 
 MIT
+
+---
+
+## 🇫🇷 Documentation en français
+
+### Description
+`rest-framework` est un framework REST léger construit directement sur le module `http` de Node.js, sans aucune dépendance externe. Il propose une API similaire à Express (routage, middleware, groupes de routes, paramètres) avec parsing de corps, CORS, fichiers statiques et journalisation intégrés en moins de 15 KB.
+
+### Installation
+```bash
+npm run build
+npm run example
+```
+
+### Utilisation
+```typescript
+import { App } from './src/App';
+import { bodyParser } from './src/middleware/bodyParser';
+import { cors } from './src/middleware/cors';
+
+const app = new App();
+app.use(cors());
+app.use(bodyParser());
+
+app.get('/utilisateurs/:id', (req, res) => {
+  res.json({ id: req.params.id });
+});
+
+app.listen(3000, () => console.log('Serveur démarré sur le port 3000'));
+```
+
+Consultez la documentation anglaise ci-dessus pour la référence complète de l'API, les middleware intégrés et les exemples.
